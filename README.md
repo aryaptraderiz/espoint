@@ -1,115 +1,124 @@
-# 🧊 esPoint - Manajemen Penjualan Minuman Dingin
+# ❄️ esPoint - Cold Beverage Sales Management App
 
 ## 📌 Overview
 
-**esPoint** adalah aplikasi manajemen penjualan dan stok minuman dingin berbasis Flutter. Aplikasi ini dirancang untuk memudahkan pemilik usaha dalam mengelola produk, bahan baku, transaksi penjualan, serta menyajikan laporan berbasis grafik. Sistem mendukung fitur notifikasi lokal maupun WhatsApp, serta sinkronisasi data secara real-time menggunakan Firebase Firestore.
+**esPoint** is a point-of-sale (POS) mobile application built using **Flutter** and powered by **Firebase**. It is designed to help small beverage businesses manage their products, ingredients (stock), transactions, and generate visual reports of their sales.
 
-Aplikasi ini cocok digunakan oleh UMKM, kios minuman, hingga bisnis waralaba yang membutuhkan sistem POS (Point of Sale) sederhana namun powerful.
+Whether you're running a juice stall, a cold drink shop, or a growing beverage business, esPoint makes it easy to track inventory, process transactions, and analyze performance in real-time.
 
 ---
 
-## ✨ Fitur Utama
+## ✨ Features
 
-- 🔐 **Autentikasi Pengguna** (Login/Register via Firebase Auth)
-- 🥤 **Manajemen Produk (Minuman)**: Tambah, edit, dan hapus minuman
-- 🧂 **Manajemen Bahan Baku**: Kelola stok bahan baku secara terstruktur
-- 💳 **Transaksi Penjualan**: Tambah dan riwayat transaksi, otomatis kurangi stok bahan
-- 📊 **Laporan Penjualan**: Visualisasi total penjualan dalam grafik
-- 🔔 **Notifikasi**: Mendukung notifikasi lokal dan integrasi WhatsApp
-- ☁️ **Sinkronisasi Cloud**: Real-time update menggunakan Firebase Firestore
-- 📱 **UI Modern**: Dibuat dengan Flutter, responsif untuk Android
+- 🔐 **User Authentication** with Firebase (email & password)
+- 🥤 **Product Management**: Add, edit, and delete cold beverage items
+- 🧂 **Ingredient (Stock) Management**: Track and update raw materials
+- 💳 **Sales Transactions**: Add new sales, auto-deduct ingredients from stock
+- 📊 **Sales Reports**: Visualize daily/monthly revenue via charts
+- 🔔 **Notifications**: Local notifications and optional WhatsApp integration
+- ☁️ **Cloud Sync**: Real-time data syncing with Firebase Firestore
+- 📱 **Modern UI**: Built with Flutter, responsive across Android devices
 
 ---
 
 ## 🚀 Getting Started
 
-### ✅ Prasyarat (Prerequisites)
+### ✅ Prerequisites
 
-Sebelum menjalankan proyek ini, pastikan Anda telah menginstal:
+Ensure you have the following installed:
 
 - [Flutter SDK](https://flutter.dev/docs/get-started/install)
-- [Android Studio](https://developer.android.com/studio) / VS Code + Flutter Extension
-- Akun Firebase + setup Firestore dan Authentication
+- [Android Studio](https://developer.android.com/studio) or VS Code with Flutter extensions
+- A configured [Firebase Project](https://console.firebase.google.com)
 
-### 🔧 Langkah Instalasi
+---
 
-1. **Clone Repository:**
+## 🛠️ Installation
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/aryaptraderiz/espoint.git
 cd espoint
 ```
-2.Install Dependencies:
+2. Install Dependencies
 flutter pub get
 
-3.Setup Firebase:
-Buat project di Firebase Console
+3. Firebase Setup
+Go to Firebase Console
 
-Tambahkan aplikasi Android (com.example.espoint_flutter)
+Create a new project and register your Android app with the package name:
+com.example.espoint_flutter
 
-Unduh file google-services.json dan letakkan di:
+Download the google-services.json file and place it in:
 /android/app/google-services.json
 
-Aktifkan Firestore dan Authentication (Email/Password)
+Enable Authentication (Email/Password) and Cloud Firestore
 
-Tambahkan file firebase_options.dart (gunakan Firebase CLI atau manual)
+Generate firebase_options.dart using Firebase CLI or manual setup
 
-4.Jalankan Project:
+4. Run the App
 flutter run
 
-🗂️ Struktur Proyek
+🗂️ Project Structure
 bash
 Salin
 Edit
 lib/
 │
-├── models/           # Data model: product, ingredient, transaction, etc.
-├── providers/        # State management menggunakan Provider
-├── screens/          # Tampilan UI: login, dashboard, produk, transaksi
-├── services/         # Integrasi Firebase, notifikasi
-├── widgets/          # Widget kustom untuk tampilan
+├── models/            # Data models: Product, Ingredient, Transaction, etc.
+├── providers/         # State management using Provider package
+├── screens/           # UI screens: Login, Dashboard, Products, Transactions
+├── services/          # Firebase integrations and helper services
+├── widgets/           # Reusable custom UI widgets
 └── firebase_options.dart
 
-🔐 Autentikasi
-Menggunakan Firebase Authentication dengan metode email & password
 
-Data pengguna disimpan pada Firestore collection users
+🔐 Authentication
+Email & password login system via Firebase Auth
 
-🔁 Sinkronisasi Data
-Semua data (produk, stok, transaksi) disimpan dan disinkronkan secara real-time menggunakan Cloud Firestore.
+New users can register and will have their profiles stored in the users collection
 
-📈 Laporan dan Grafik
-Menggunakan fl_chart untuk visualisasi total penjualan dalam bentuk grafik batang.
+🔄 Real-Time Data
+All changes to products, ingredients, and transactions are synced in real-time using Cloud Firestore
 
-Data laporan diambil dari total transaksi harian/mingguan/bulanan.
+Offline caching is handled automatically by Firestore SDK
 
-📤 Notifikasi
-Menggunakan notifikasi lokal via flutter_local_notifications
+📈 Sales Reporting
+Integrated with fl_chart to visualize transaction data
 
-Dukungan pengiriman notifikasi ke WhatsApp via API eksternal (opsional, bisa ditambahkan melalui webhook)
+Bar charts show revenue statistics by day, week, or month
 
-💡 Teknologi yang Digunakan
+🔔 Notifications
+Local notifications are implemented using flutter_local_notifications
+
+WhatsApp notification feature can be added via webhook/API (optional)
+
+🛠️ Technologies Used
 Flutter & Dart
 
-Firebase Auth
+Firebase Authentication
 
-Cloud Firestore
+Firebase Cloud Firestore
 
-Provider
+Provider (State Management)
 
-fl_chart
+fl_chart (Data Visualization)
 
-flutter_local_notifications
+flutter_local_notifications (Local Alerts)
 
-🧑‍💻 Kontribusi
-Kontribusi sangat terbuka! Jika kamu ingin menyempurnakan UI, menambah fitur, atau memperbaiki bug, silakan buat pull request.
 
-📄 Lisensi
+
+🤝 Contribution
+Contributions are welcome! Feel free to fork this repo and submit a pull request to improve UI, fix bugs, or add new features.
+
+📄 License
 MIT License © 2025 esPoint
-member:
+
+Member  :
 1.Arya Putra Aderiz
-2.Killy Octama Kristiano
-3.Muhammad Andyfa Fakhrizal
+2.Killy OCtama Kristiano
+3.Muhammad Andyfa Fahkrizal
 4.Pajar Apriliyanto
 
 
