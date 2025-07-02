@@ -107,9 +107,9 @@ Kontribusi sangat terbuka! Jika kamu ingin menyempurnakan UI, menambah fitur, at
 📄 Lisensi
 MIT License © 2025 esPoint
 member:
-Arya Putra Aderiz
-Killy Octama Kristiano
-Muhammad Andyfa Fakhrizal
-Pajar Apriliyanto
+1.Arya Putra Aderiz
+2.Killy Octama Kristiano
+3.Muhammad Andyfa Fakhrizal
+4.Pajar Apriliyanto
 
 
