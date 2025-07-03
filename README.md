@@ -113,12 +113,5 @@ flutter_local_notifications (Local Alerts)
 Contributions are welcome! Feel free to fork this repo and submit a pull request to improve UI, fix bugs, or add new features.
 
 📄 License
-MIT License © 2025 esPoint
-
-Member  :
-1.Arya Putra Aderiz
-2.Killy OCtama Kristiano
-3.Muhammad Andyfa Fahkrizal
-4.Pajar Apriliyanto
-
+MIT License © 2025 Arya Putra Aderiz 
 
