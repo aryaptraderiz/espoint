@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1051820998552",
+    "project_id": "espointflutter",
+    "storage_bucket": "espointflutter.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051820998552:android:739a3ee5f47c64aa81b5ed",
+        "android_client_info": {
+          "package_name": "com.example.espoint_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1LROI2M-6sLTixgJuwU-e_W2PyeVJSf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
